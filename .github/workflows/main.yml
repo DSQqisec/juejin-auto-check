@@ -14,11 +14,11 @@ jobs:
     steps:
       # 1. 检出代码
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       # 2. 设置 Node.js 环境
       - name: Set up Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: '18' # 使用一个LTS版本
 
@@ -46,7 +46,7 @@ jobs:
       # 7. 上传调试截图（如果失败）
       - name: Upload screenshots
         if: failure()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: debug-screenshots
           path: "*.png"
