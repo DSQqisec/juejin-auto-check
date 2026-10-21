@@ -46,7 +46,7 @@ jobs:
       # 7. 上传调试截图（如果失败）
       - name: Upload screenshots
         if: failure()
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v7
         with:
           name: debug-screenshots
           path: "*.png"
